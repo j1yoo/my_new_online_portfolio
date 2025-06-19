@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Scholarly speech: [_`Emerging Topics in Digital Economy Services`_](https://www.bit.ly/nstc23w) at NSTC 2023 IS Workshop
+Scholarly speech: [_`Emerging Topics in Digital Economy Services`_](https://www.bit.ly/nstc23w) at National Science and Technology Council (NSTC) 2023 IS Workshop

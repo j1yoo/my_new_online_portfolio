@@ -1,34 +1,98 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Kim":
+  - firstname: ["Wonjoon", "W."]
+    url: http://wjkim.kaist.ac.kr
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+  - firstname: ["Minki", "M."]
+    url: http://wjkim.kaist.ac.kr
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+  - firstname: ["Namil", "N."]
+    url: https://yonsei.elsevierpure.com/en/persons/namil-kim
+  
+"Kim*":
+  - firstname: ["Wonjoon", "W."]
+    url: http://wjkim.kaist.ac.kr
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+  - firstname: ["Minki", "M."]
+    url: http://wjkim.kaist.ac.kr
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+  - firstname: ["Namil", "N."]
+    url: https://yonsei.elsevierpure.com/en/persons/namil-kim
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"Yoon": 
+  - firstname: ["David", "Hyungseok David", "Hyungseok", "D.", "H.D.", "H."]
+    url: https://www.york.ac.uk/business-society/people/davidyoon/
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+  - firstname: ["Seokjoon", "S."]
+    url: https://www.linkedin.com/in/seokjoon-yoon-473405210/
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"Yoon*": 
+  - firstname: ["David", "Hyungseok David", "Hyungseok", "D.", "H.D.", "H."]
+    url: https://www.york.ac.uk/business-society/people/davidyoon/
+
+  - firstname: ["Seokjoon", "S."]
+    url: https://www.linkedin.com/in/seokjoon-yoon-473405210/
+
+
+"Lee":
+  - firstname: ["Min Sok"]
+    url: https://economics.uchicago.edu/directory/Min-Sok-Lee
+
+
+"Shmueli":
+  - firstname: ["Galit"]
+    url: https://www.iss.nthu.edu.tw/faculty/Galit-Shmueli
+
+"Martens": 
+  - firstname: ["David"]
+    url: https://www.uantwerpen.be/en/staff/david-martens/
+
+"Greene": 
+  - firstname: ["Travis"]
+    url: https://www.cbs.dk/en/research/departments-and-centres/department-of-digitalization/staff/trgrdigi/
+
+
+"Chen": 
+  - firstname: ["Yuxin", "Y."]
+    url: https://shanghai.nyu.edu/academics/faculty/directory/yuxin-chen
+
+"Chen*": 
+  - firstname: ["Yuxin", "Y."]
+    url: https://shanghai.nyu.edu/academics/faculty/directory/yuxin-chen
+
+
+"Nam": 
+  - firstname: ["Sungjoon", "S."]
+    url: https://www.linkedin.com/in/sungjoonnam
+
+"Nam*": 
+  - firstname: ["Sungjoon", "S."]
+    url: https://www.linkedin.com/in/sungjoonnam
+
+
+"Ray": 
+  - firstname: ["Soumya", "S."]
+    url: https://www.iss.nthu.edu.tw/faculty/Soumya-Ray
+
+"Ray*": 
+  - firstname: ["Soumya", "S."]
+    url: https://www.iss.nthu.edu.tw/faculty/Soumya-Ray
+
+
+"Ackerman": 
+  - firstname: ["Joshua", "J."]
+    url: https://isr.umich.edu/about/faculty-profiles/josh-ackerman/
+
+
+"Duron": 
+  - firstname: ["Edgar A.", "Edgar", "E.A.", "E."]
+    url: https://www.iss.nthu.edu.tw/PhD/PhD-Students/edgar-duron
+
+
+"Park": 
+  - firstname: ["Hee Mok"]
+    url: https://umanitoba.ca/asper/hee-mok-park
+
+"Park*": 
+  - firstname: ["Hee Mok"]
+    url: https://umanitoba.ca/asper/hee-mok-park
