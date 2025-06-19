@@ -2,7 +2,7 @@
 layout: page
 permalink: /research/
 title: research
-description: 
+description: The corresponding author is denoted by *. 
 categories: ['manuscripts under review', 'working papers', 'work-in-progress', 'publications']
 catprint: ['', 'manuscripts under review', 'working papers', 'work-in-progress', 'publications']
 nav: true

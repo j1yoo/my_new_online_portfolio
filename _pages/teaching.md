@@ -9,8 +9,8 @@ nav_order: 6
 
 ## National Tsing Hua University
 
-- Programming for Business Analytics (ISS4066 & ISS5066), Fall 2021 - Current (Undergraduate & Graduate)
-- Experiments and Causal Inference (ISS5096), Spring 2022 - Current (Graduate)
+- Programming for Business Analytics (ISS4066 & ISS5066), Fall 2021 - Current
+- Experiments and Causal Inference (ISS5096), Spring 2022 - Current
 - Research Seminar on Innovation & Marketing (TBD)
 
 
