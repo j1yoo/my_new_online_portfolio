@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://j1yoo.github.io/my_new_online_portfolio/sitemap.xml
+Sitemap: https://j1yoo.github.io/sitemap.xml
