@@ -542,13 +542,6 @@ ninja.data = [{
           window.open("https://twitter.com/j1yoo4", "_blank");
         },
       },{
-        id: 'social-email',
-        title: 'email',
-        section: 'Socials',
-        handler: () => {
-          window.open("mailto:%6A%61%65%77%6F%6E.%79%6F%6F@%69%73%73.%6E%74%68%75.%65%64%75.%74%77", "_blank");
-        },
-      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
