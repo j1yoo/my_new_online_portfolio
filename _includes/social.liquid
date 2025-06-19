@@ -1,5 +1,9 @@
 {% for social in site.data.socials %}
   {% case social[0] %}
+    {% when 'arxiv_id' %}
+      <a href="https://arxiv.org/a/{{ social[1] }}" title="arXiv"><i class="ai ai-arxiv"></i></a>
+    {% when 'ssrn_id' %}
+      <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id={{ social[1] }}" title="SSRN"><i class="ai ai-ssrn"></i></a>
     {% when 'acm_id' %}
       <a href="https://dl.acm.org/profile/{{ social[1] }}/" title="ACM DL"><i class="ai ai-acm"></i></a>
     {% when 'blogger_url' %}

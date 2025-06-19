@@ -37,8 +37,7 @@ nav_order: 1
         {% bibliography_count -f papers -q @*[kind={{ cat_ }} && year={{ y }}]* %}
       {%- endcapture -%}
   
-      {% if citecount != "0" %}
-        <h2 class="year">{{ y }}</h2>
+      {% if citecount != "0" %}  
         {% bibliography -f papers -q @*[kind={{ cat_ }} && year={{ y }}]* %}
       {% endif %}
     {% endfor %}
