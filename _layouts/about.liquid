@@ -73,6 +73,24 @@ layout: default
       </div>
     {% endif %} -->
 
+    <div class="footer-contact" style="text-align: center; margin-top: 3rem;">
+
+      <hr>  <p style="margin-bottom: 1.5rem;">
+        <strong style="font-size: 1.4rem;">{{ site.first_name }} {{ site.last_name }}</strong>
+      </p>
+
+      <p style="margin-bottom: 1.5rem;">
+        <i class="fas fa-envelope fa-fw"></i>&nbsp;Email<br>
+        <a href="mailto:{{ site.data.contact.email | encode_email }}">{{ site.data.contact.email }}</a>
+      </p>
+
+      <div class="contact-address">
+        <i class="fas fa-map-marker-alt fa-fw"></i>&nbsp;Address<br>
+        {{ site.data.contact.address | newline_to_br }}
+      </div>
+
+    </div>
+
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}
     {% endif %}
