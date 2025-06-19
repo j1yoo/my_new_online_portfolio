@@ -493,11 +493,11 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/my_new_online_portfolio/projects/9_project/";
             },},{
-        id: 'social-email',
-        title: 'email',
+        id: 'social-github',
+        title: 'GitHub',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%6A%61%65%77%6F%6E.%79%6F%6F@%69%73%73.%6E%74%68%75.%65%64%75.%74%77", "_blank");
+          window.open("https://github.com/j1yoo", "_blank");
         },
       },{
         id: 'social-scholar',
@@ -514,18 +514,18 @@ ninja.data = [{
           window.open("https://www.researchgate.net/profile/Jaewon-Yoo-3/", "_blank");
         },
       },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
+        id: 'social-ssrn_id',
+        title: 'Ssrn_id',
         section: 'Socials',
         handler: () => {
-          window.open("https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=5182752", "_blank");
+          window.open("", "_blank");
         },
       },{
-        id: 'social-github',
-        title: 'GitHub',
+        id: 'social-arxiv_id',
+        title: 'Arxiv_id',
         section: 'Socials',
         handler: () => {
-          window.open("https://github.com/j1yoo", "_blank");
+          window.open("", "_blank");
         },
       },{
         id: 'social-linkedin',
@@ -540,6 +540,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://twitter.com/j1yoo4", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6A%61%65%77%6F%6E.%79%6F%6F@%69%73%73.%6E%74%68%75.%65%64%75.%74%77", "_blank");
         },
       },{
       id: 'light-theme',
