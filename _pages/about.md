@@ -31,4 +31,10 @@ Before joining NTHU, I was a visiting postdoctoral fellow at the [Center of Busi
 
 My research interests span innovation, information systems, and marketing, with a specific focus on the societal and economic impacts of emerging technologies. Methodologically, I focus on causal inference, applying techniques that include quasi-experimental methods like regression discontinuity (RD) designs and synthetic difference in differences (SDiD), as well as causal machine learning (ML) approaches such as double-debiased machine learning (DML). I also have extensive experience designing and conducting large-scale randomized controlled trials (RCTs) by engaging in industry collaborations. For more detailed information on my publications and ongoing projects, please visit [the research section]({% link _pages/publications.md %}) of my webpage.
 
+**For prospective students:**
+
 Students who are interested in pursuing research under my supervision are strongly encouraged to have first completed at least one of my courses. Familiarity with the material from [ISS5096](https://drive.google.com/file/d/18S9kzicR84sdMbW2mkB8oOf4vjOEzI-E/view?usp=sharing) is particularly beneficial.
+
+**Guidelines for Letter Recommendations:**
+
+I provide recommendation letters for students who have completed a minimum of two courses under my instruction and have engaged with me academically for at least one full semester.
