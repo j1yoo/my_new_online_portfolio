@@ -35,6 +35,8 @@ My research interests span innovation, information systems, and marketing, with 
 
 Students who are interested in pursuing research under my supervision are strongly encouraged to have first completed at least one of my courses. Familiarity with the material from [ISS5096](https://drive.google.com/file/d/18S9kzicR84sdMbW2mkB8oOf4vjOEzI-E/view?usp=sharing) is particularly beneficial.
 
+When reaching out, please include a _cover letter_ detailing your research interests and proposed topic area, accompanied by your _CV_ and _academic transcript_.
+
 **Guidelines for Letter Recommendations:**
 
 I provide recommendation letters for students who have completed a minimum of two courses under my instruction and have engaged with me academically for at least one full semester.
