@@ -123,7 +123,7 @@ disqus_shortname: al-folio # put your disqus shortname
 external_sources:
   - name: substack.com
     posts:
-        - url: https://open.substack.com/pub/diddigest/p/ddd-estimators-distributional-effects?utm_campaign=post&utm_medium=web
+        - url: https://diddigest.substack.com/p/ddd-estimators-distributional-effects
           published_date: 2025-05-23
 #   - name: Google Blog
 #     posts:

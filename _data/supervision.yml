@@ -10,7 +10,7 @@
 - name: Daniel Vinicio Gonzalez de Leon
   year: 2021-23
   info: "iMBA, National Tsing Hua University (NTHU)"
-  thesis: "Evaluating risk-reducing incentives to influence consumers' purchase decision of private-label products"
+  thesis: "Evaluating Risk-Reducing Incentives to Influence Consumers' Purchase Decision of Private-Label Products"
   abstract: "Private Labels (PL) continue to grow in sales and portfolio, driven by the increasing interest from both retailers and consumers toward PL. There has been continuous research in the field, and even after the constant improvement in the quality of PL products, the main concern faced by consumers when deciding whether to switch from National Brands to PL is the perceived risk. We test three different promotions, Price Promotion, Extra Warranty, and Free Returns, to evaluate the effectiveness to increase consumer PL purchase decisions and reduce perceived risk. This paper conducted three studies, to measure the main effect of the promotions on PL purchase decisions, PL purchase intention, and perceived risk. The effect was measured using an online base purchase scenario. A total of 300 participants were collected using Prolific Academic to collect the data. All three strategies were found to positively influence consumer purchase decisions of treated Private labels, varying across product price ranges. Study 3 shows that perceived risk mediates the effect of the promotion strategies. Also proving that results are still significant for “self” and “others” purchase scenarios."
   status: "Completed"
   degree: "Masters"
@@ -34,6 +34,18 @@
   degree: "Masters"
   thesis_url: https://etd.lib.nthu.edu.tw/detail/0570df8a7951673cc90d245c94b48a0f/?seq=1
   
+- name: Zhan-Yi Liao
+  year: 2023-current
+  info: "Institute of Information Management, National Yang Ming Chiao Tung University (NYCU)"
+  thesis: "Robust Counterfactual Explanations using Gaussian Bayesian Classifiers"
+  abstract: "Counterfactual explanations (CEs) play a key role in explainable artificial intelligence (XAI), particularly in detecting bias and improving the interpretability of data-driven classification models. A counterfactual explanation identifies the minimal perturbation needed to change the model's decision, thereby shedding light on the reasoning behind the model's decision-making process. However, when applied to statistical learning models, existing counterfactual explanation methods often lack a clear causal structure, leading to explanations that rely on statistical correlations rather than causal reasoning. This makes it difficult to derive explicit and meaningful justifications for the decisions. This study conducts counterfactual reasoning based on a Gaussian Bayesian classifier (GBC), integrating a robust optimization iterative method to identify counterfactual explanations that remain valid even after slight perturbations to the features, thereby improving the reliability and persuasiveness of the counterfactual explanations. Experimental results demonstrate that our method shows strong potential for applications in domains such as medical diagnosis, financial risk assessment, recommendation systems, fairness audits, and legal decision support, providing more causally sound explanations for critical decision-making."
+  note: Co-advised with <strong> <a href="https://iim.nycu.edu.tw/en/teacher/chen-po-an" target="_blank">Po-An Chen</a> </strong> (NYCU)
+  status: "In Progress"
+  degree: "Masters"
+  linkedin: "https://www.linkedin.com/in/zhan-yi-liao"
+  github: "https://github.com/zhanyiliao"
+  # photo: zhanyi_liao.jpg
+
 - name: Pei-Jou (Pearl) Lin
   year: 2023-current
   info: "Institute of Service Science, National Tsing Hua University (NTHU)"
@@ -55,17 +67,6 @@
   status: "In Progress"
   degree: "Masters"
 
-- name: Zhan-Yi Liao
-  year: 2023-current
-  info: "Institute of Information Management, National Yang Ming Chiao Tung University (NYCU)"
-  thesis: "Robust Counterfactual Explanations using Gaussian Bayesian Classifiers"
-  abstract: "Counterfactual explanations (CEs) play a key role in explainable artificial intelligence (XAI), particularly in detecting bias and improving the interpretability of data-driven classification models. A counterfactual explanation identifies the minimal perturbation needed to change the model's decision, thereby shedding light on the reasoning behind the model's decision-making process. However, when applied to statistical learning models, existing counterfactual explanation methods often lack a clear causal structure, leading to explanations that rely on statistical correlations rather than causal reasoning. This makes it difficult to derive explicit and meaningful justifications for the decisions. This study conducts counterfactual reasoning based on a Gaussian Bayesian classifier (GBC), integrating a robust optimization iterative method to identify counterfactual explanations that remain valid even after slight perturbations to the features, thereby improving the reliability and persuasiveness of the counterfactual explanations. Experimental results demonstrate that our method shows strong potential for applications in domains such as medical diagnosis, financial risk assessment, recommendation systems, fairness audits, and legal decision support, providing more causally sound explanations for critical decision-making."
-  note: Co-advised with <strong> <a href="https://iim.nycu.edu.tw/en/teacher/chen-po-an" target="_blank">Po-An Chen</a> </strong> (NYCU)
-  status: "In Progress"
-  degree: "Masters"
-  linkedin: "https://www.linkedin.com/in/zhan-yi-liao"
-  github: "https://github.com/zhanyiliao"
-  # photo: zhanyi_liao.jpg
 
 - name: John Loui Santiago
   year: 2025-current
