@@ -3,6 +3,9 @@ require 'httparty'
 require 'jekyll'
 require 'nokogiri'
 require 'time'
+require 'digest'
+require 'fileutils'
+require 'json'
 
 module ExternalPosts
   class ExternalPostsGenerator < Jekyll::Generator
@@ -23,10 +26,27 @@ module ExternalPosts
     end
 
     def fetch_from_rss(site, src)
-      xml = HTTParty.get(src['rss_url']).body
-      return if xml.nil?
-      feed = Feedjira.parse(xml)
-      process_entries(site, src, feed.entries)
+      begin
+        response = HTTParty.get(src['rss_url'], {
+          timeout: 30,
+          headers: {
+            'User-Agent' => 'Mozilla/5.0 (compatible; Jekyll External Posts Plugin)'
+          }
+        })
+        
+        if response.success?
+          xml = response.body
+          return if xml.nil?
+          feed = Feedjira.parse(xml)
+          process_entries(site, src, feed.entries)
+        else
+          puts "Warning: Failed to fetch RSS from #{src['rss_url']} (Status: #{response.code})"
+          return
+        end
+      rescue => e
+        puts "Error fetching RSS from #{src['rss_url']}: #{e.message}"
+        return
+      end
     end
 
     def process_entries(site, src, entries)
@@ -87,26 +107,156 @@ module ExternalPosts
     end
 
     def fetch_content_from_url(url)
-      html = HTTParty.get(url).body
-      parsed_html = Nokogiri::HTML(html)
+      # Check cache first
+      cached_content = get_cached_content(url)
+      return cached_content if cached_content
+      
+      retries = 0
+      max_retries = 3
+      
+      begin
+        response = HTTParty.get(url, {
+          timeout: 30,
+          headers: {
+            'User-Agent' => 'Mozilla/5.0 (compatible; Jekyll External Posts Plugin; +https://jekyllrb.com/)',
+            'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language' => 'en-US,en;q=0.5',
+            'Accept-Encoding' => 'gzip, deflate',
+            'Connection' => 'keep-alive'
+          }
+        })
+        
+        unless response.success?
+          puts "Warning: Failed to fetch content from #{url} (Status: #{response.code})"
+          return get_cached_content(url) || default_content(url)
+        end
+        
+        html = response.body
+        parsed_html = Nokogiri::HTML(html)
 
-      title = parsed_html.at('head title')&.text&.strip || ''
+        # Enhanced title extraction for Substack and other platforms
+        title = extract_title(parsed_html, url)
+        description = extract_description(parsed_html)
+        body_content = extract_body_content(parsed_html)
+
+        content = {
+          title: title,
+          content: body_content,
+          summary: description
+        }
+        
+        # Cache successful fetch
+        cache_content(url, content)
+        content
+        
+      rescue Net::TimeoutError, Timeout::Error => e
+        retries += 1
+        if retries <= max_retries
+          puts "Timeout fetching #{url}, retrying (#{retries}/#{max_retries})..."
+          sleep(2 ** retries) # Exponential backoff
+          retry
+        else
+          puts "Error: Timeout fetching content from #{url} after #{max_retries} retries"
+          return get_cached_content(url) || default_content(url)
+        end
+      rescue => e
+        puts "Error fetching content from #{url}: #{e.message}"
+        return get_cached_content(url) || default_content(url)
+      end
+    end
+
+    def cache_dir
+      @cache_dir ||= File.join(Dir.tmpdir, 'jekyll_external_posts_cache')
+    end
+
+    def ensure_cache_dir
+      FileUtils.mkdir_p(cache_dir) unless Dir.exist?(cache_dir)
+    end
+
+    def cache_file_path(url)
+      File.join(cache_dir, "#{Digest::SHA256.hexdigest(url)}.json")
+    end
+
+    def cache_content(url, content)
+      ensure_cache_dir
+      cache_data = {
+        content: content,
+        timestamp: Time.now.to_i,
+        url: url
+      }
+      
+      begin
+        File.write(cache_file_path(url), cache_data.to_json)
+        puts "Cached content for #{url}"
+      rescue => e
+        puts "Warning: Failed to cache content for #{url}: #{e.message}"
+      end
+    end
+
+    def get_cached_content(url)
+      cache_file = cache_file_path(url)
+      return nil unless File.exist?(cache_file)
+      
+      begin
+        cache_data = JSON.parse(File.read(cache_file))
+        # Cache expires after 24 hours
+        if Time.now.to_i - cache_data['timestamp'] < 86400
+          puts "Using cached content for #{url}"
+          return symbolize_keys(cache_data['content'])
+        else
+          File.delete(cache_file) # Remove expired cache
+          return nil
+        end
+      rescue => e
+        puts "Warning: Failed to read cache for #{url}: #{e.message}"
+        File.delete(cache_file) if File.exist?(cache_file) # Remove corrupted cache
+        return nil
+      end
+    end
+
+    def symbolize_keys(hash)
+      hash.transform_keys(&:to_sym)
+    end
+
+    def extract_title(parsed_html, url)
+      # Try multiple title extraction methods
+      title = parsed_html.at('head meta[property="og:title"]')&.attr('content')
+      title ||= parsed_html.at('head meta[name="twitter:title"]')&.attr('content')
+      title ||= parsed_html.at('head title')&.text&.strip
+      title ||= parsed_html.at('h1')&.text&.strip
+      title ||= "External Post from #{URI.parse(url).host}"
+      
       # Clean up title by removing site suffix
       title = title.split(' | ').first if title.include?(' | ')
       title = title.split(' - ').first if title.include?(' - ')
-      title = title.strip
-      description = parsed_html.at('head meta[name="description"]')&.attr('content')
-      description ||= parsed_html.at('head meta[name="og:description"]')&.attr('content')
-      description ||= parsed_html.at('head meta[property="og:description"]')&.attr('content')
+      title.strip
+    end
 
-      body_content = parsed_html.search('p').map { |e| e.text }
-      body_content = body_content.join() || ''
+    def extract_description(parsed_html)
+      description = parsed_html.at('head meta[property="og:description"]')&.attr('content')
+      description ||= parsed_html.at('head meta[name="twitter:description"]')&.attr('content')
+      description ||= parsed_html.at('head meta[name="description"]')&.attr('content')
+      description&.strip
+    end
 
+    def extract_body_content(parsed_html)
+      # Try to find main content area first
+      main_content = parsed_html.at('main, article, .post-content, .entry-content')
+      if main_content
+        body_content = main_content.search('p').map { |e| e.text }
+      else
+        body_content = parsed_html.search('p').map { |e| e.text }
+      end
+      
+      # Clean and join content
+      body_content.reject(&:empty?).join(' ').strip
+    end
+
+    def default_content(url)
       {
-        title: title,
-        content: body_content,
-        summary: description
-        # Note: The published date is now added in the fetch_from_urls method.
+        title: "External Post from #{URI.parse(url).host rescue 'External Source'}",
+        content: "This is an external post. Click the link to read the full content.",
+        summary: "External content from #{URI.parse(url).host rescue 'an external source'}."
       }
     end
 
