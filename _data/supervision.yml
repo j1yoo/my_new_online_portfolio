@@ -2,50 +2,76 @@
   year: 2021-23
   info: "Institute of Service Science, National Tsing Hua University (NTHU)"
   thesis: "Does CSR Visibility Lead to Superior Financial Performance? Evidence from a Regression Discontinuity Design"
+  abstract: "This study investigates the impact of Corporate Social Responsibility (CSR) Visibility on financial performance using a quasi-experimental design. CSR Visibility is operationalized through a leading sustainability index called the Dow Jones Sustainability World Index (DJSI). The study focuses on firms that are accepted or declined by a narrow margin of CSR score, which allows for the examination of the effect of DJSI membership on performance through the use of a Regression Discontinuity Design (RDD). Based on my empirical findings, it appears that greater CSR visibility does not result in improved financial performance. This suggests that firms with higher levels of CSR visibility may need to allocate more resources towards CSR activities in order to meet stakeholder expectations, or that stakeholders may not attach significant value to CSR certification. As a result, these firms may experience a decline in financial performance in the short term."
+  degree: "Masters"
+  status: "Completed"
+  thesis_url: https://etd.lib.nthu.edu.tw/detail/3debccdc9b57b7596044c3c05ffe1b1b/?seq=4
 
 - name: Daniel Vinicio Gonzalez de Leon
   year: 2021-23
   info: "iMBA, National Tsing Hua University (NTHU)"
   thesis: "Evaluating risk-reducing incentives to influence consumers' purchase decision of private-label products"
+  abstract: "Private Labels (PL) continue to grow in sales and portfolio, driven by the increasing interest from both retailers and consumers toward PL. There has been continuous research in the field, and even after the constant improvement in the quality of PL products, the main concern faced by consumers when deciding whether to switch from National Brands to PL is the perceived risk. We test three different promotions, Price Promotion, Extra Warranty, and Free Returns, to evaluate the effectiveness to increase consumer PL purchase decisions and reduce perceived risk. This paper conducted three studies, to measure the main effect of the promotions on PL purchase decisions, PL purchase intention, and perceived risk. The effect was measured using an online base purchase scenario. A total of 300 participants were collected using Prolific Academic to collect the data. All three strategies were found to positively influence consumer purchase decisions of treated Private labels, varying across product price ranges. Study 3 shows that perceived risk mediates the effect of the promotion strategies. Also proving that results are still significant for “self” and “others” purchase scenarios."
+  status: "Completed"
+  degree: "Masters"
+  thesis_url: https://etd.lib.nthu.edu.tw/detail/eb793427d2f5d99a24007a84ca1fd4e9/?seq=3
   
 - name: Sin-Yu (Celine) Lin
   year: 2022-24
   info: "Institute of Service Science, National Tsing Hua University (NTHU)"
   thesis: "Influence of Message Framing on Consumer Adoption of AI Services: Evidence from the Financial Sector"
+  abstract: "This study investigates the factors influencing technology acceptance, focusing on the roles of perceived trust, mutual benefits, social influence, and perceived risk. Employing a combination of main effect, mediation, and moderation models, the research aims to elucidate the complex interactions between these variables. The main effect model highlights the critical importance of perceived trust in driving technology acceptance, while the mediation analysis reveals that perceived trust mediates the effects of mutual benefits and social influence on technology acceptance. The moderation analysis examines the influence of task complexity and task importance on the relationship between perceived risk and trust, finding significant moderation by task complexity but not by task importance. The study’s findings underscore the need for managers to prioritize trust-building measures and consider task-related factors when designing strategies to enhance technology adoption. Limitations include the sample size, diversity, and the cross- sectional nature of the data, suggesting the need for future research with larger, more diverse samples and longitudinal designs. Additionally, the current study’s reliance on email advertisements as the treatment medium suggests that future research should explore alternative communication channels to validate the findings. These insights provide a comprehensive understanding of the dynamics affecting technology acceptance and offer practical implications for enhancing adoption in various contexts."
+  status: "Completed" 
+  degree: "Masters"
+  thesis_url: https://etd.lib.nthu.edu.tw/detail/668262f8f04ca01c4f1b938a1a3b0412/?seq=2
   
 - name: Yu-Chen (Amy) Hsiao
   year: 2022-24
   info: "Institute of Service Science, National Tsing Hua University (NTHU)"
   thesis: "Examining the Impact of Paid Family and Medical Leave Policy on Firm Innovation: Evidence from Quasi-Experiments"
+  abstract: "This thesis examines the impact of Paid Family and Medical Leave (PFML) on firm innovation within the United States, employing a novel empirical approach to address a gap in current research. As the U.S. marks the 30th anniversary of the Family and Medical Leave Act (FMLA), which offers unpaid leave, the absence of a federal paid leave policy stands in stark contrast to other OECD countries. This study explores how state-level PFML policies, which provide paid leave, affect firm innovation, a crucial aspect of economic competitiveness that has been underexplored in the context of PFML. Utilizing a difference-in-differences methodology as proposed by Callaway and Sant’Anna, the research investigates firm-level innovation outcomes, specifically the number of patents and adjusted total citations, across various states with staggered implementations of PFML policies from 1994 to 2015. The findings indicate that PFML has a positive and statistically significant effect on firm innovation, suggesting that PFML policies do not merely alleviate employee challenges but actively contribute to enhancing a firm’s innovative output. By integrating PFML into the broader discussion of workforce policies, this study challenges the prevailing view of such policies as burdensome costs to businesses. Instead, it highlights their potential as investments in human capital that yield returns in the form of higher innovation. These insights are particularly valuable for policymakers, business leaders, and scholars as they consider the implications of expanding family-friendly policies to foster a more inclusive and productive economic environment."
+  status: "Completed"
+  degree: "Masters"
+  thesis_url: https://etd.lib.nthu.edu.tw/detail/0570df8a7951673cc90d245c94b48a0f/?seq=1
   
-- name: Zhan-Yi Liao
+- name: Pei-Jou (Pearl) Lin
   year: 2023-current
-  info: "Institute of Information Management, National Yang Ming Chiao Tung University (NYCU)"
-  thesis: Robust Counterfactual Explanations using Gaussian Bayesian Classifiers
-  note: Co-advised with <strong> <a href="https://iim.nycu.edu.tw/en/teacher/chen-po-an" target="_blank">Po-An Chen</a> </strong> (NYCU)
+  info: "Institute of Service Science, National Tsing Hua University (NTHU)"
+  thesis: "Social initiatives (e.g., AI for social good; AI4SG) and innovation activity on Github"
+  status: "In Progress"
+  degree: "Masters"
 
 - name: Natasha Carissa Tedjasukmana
   year: 2023-current
   info: "iMBA, National Tsing Hua University (NTHU)"
   thesis: "Unintended consequences of sales ban: Empirical analysis of the book retailing industry"
+  status: "In Progress"
+  degree: "Masters"
 
 - name: Medjine Nestant
   year: 2023-current
   info: "iMBA, National Tsing Hua University (NTHU)"
   thesis: "Impact of in-store music familiarity on affect, engagement, and purchase behavior"
+  status: "In Progress"
+  degree: "Masters"
 
-- name: Pei-Jou (Pearl) Li
+- name: Zhan-Yi Liao
   year: 2023-current
-  info: "Institute of Service Science, National Tsing Hua University (NTHU)"
-  thesis: "Social initiatives (e.g., AI for social good; AI4SG) and innovation activity on Github"
+  info: "Institute of Information Management, National Yang Ming Chiao Tung University (NYCU)"
+  thesis: "Robust Counterfactual Explanations using Gaussian Bayesian Classifiers"
+  abstract: "Counterfactual explanations (CEs) play a key role in explainable artificial intelligence (XAI), particularly in detecting bias and improving the interpretability of data-driven classification models. A counterfactual explanation identifies the minimal perturbation needed to change the model's decision, thereby shedding light on the reasoning behind the model's decision-making process. However, when applied to statistical learning models, existing counterfactual explanation methods often lack a clear causal structure, leading to explanations that rely on statistical correlations rather than causal reasoning. This makes it difficult to derive explicit and meaningful justifications for the decisions. This study conducts counterfactual reasoning based on a Gaussian Bayesian classifier (GBC), integrating a robust optimization iterative method to identify counterfactual explanations that remain valid even after slight perturbations to the features, thereby improving the reliability and persuasiveness of the counterfactual explanations. Experimental results demonstrate that our method shows strong potential for applications in domains such as medical diagnosis, financial risk assessment, recommendation systems, fairness audits, and legal decision support, providing more causally sound explanations for critical decision-making."
+  note: Co-advised with <strong> <a href="https://iim.nycu.edu.tw/en/teacher/chen-po-an" target="_blank">Po-An Chen</a> </strong> (NYCU)
+  status: "In Progress"
+  degree: "Masters"
+  linkedin: "https://www.linkedin.com/in/zhan-yi-liao"
+  github: "https://github.com/zhanyiliao"
+  # photo: zhanyi_liao.jpg
 
 - name: John Loui Santiago
   year: 2025-current
   info: "iMBA, National Tsing Hua University (NTHU)"
-  # thesis: 
-
-- name: Mave K. Alexander
+  degree: "Masters"
+  
+- name: Mave Kimara Alexander
   year: 2025-current
   info: "iMBA, National Tsing Hua University (NTHU)"
-  # thesis: 
-

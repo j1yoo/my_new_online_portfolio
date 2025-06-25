@@ -696,6 +696,108 @@ footer.sticky-bottom {
 
 .publications {
   margin-top: 2rem;
+  padding-top: 1rem;
+
+  // Add spacing between student entries
+  .row {
+    margin-bottom: 1.25rem;
+    
+    // Student photo styling for supervisions page
+    .col-sm-2.preview {
+      img {
+        width: 100%;
+        max-width: 120px;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 6px;
+        object-position: center top;
+      }
+    }
+  }
+
+  // Student entry styling for supervisions page (simple layout)
+  .student-entry {
+    margin-bottom: 1.5rem;
+    
+    .links {
+      a.btn {
+        color: var(--global-text-color);
+        border: 1px solid var(--global-text-color);
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        margin-left: 0;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        background-color: transparent;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: var(--global-theme-color);
+          border-color: var(--global-theme-color);
+          text-decoration: none;
+        }
+
+        &:focus {
+          color: var(--global-theme-color);
+          border-color: var(--global-theme-color);
+          text-decoration: none;
+          box-shadow: none;
+        }
+      }
+    }
+
+    // Hidden content styling
+    .hidden {
+      font-size: 0.875rem;
+      max-height: 0px;
+      overflow: hidden;
+      text-align: justify;
+      transition-property: 0.15s ease;
+      -moz-transition: 0.15s ease;
+      -ms-transition: 0.15s ease;
+      -o-transition: 0.15s ease;
+      transition: all 0.15s ease;
+
+      p {
+        line-height: 1.4em;
+        margin: 10px;
+      }
+
+      pre {
+        font-size: 1em;
+        line-height: 1.4em;
+        padding: 10px;
+      }
+    }
+
+    .hidden.open {
+      max-height: 100em;
+      transition-property: 0.15s ease;
+      -moz-transition: 0.15s ease;
+      -ms-transition: 0.15s ease;
+      -o-transition: 0.15s ease;
+      transition: all 0.15s ease;
+    }
+
+    div.abstract.hidden {
+      border: dashed 1px var(--global-bg-color);
+    }
+
+    div.abstract.hidden.open {
+      border-color: var(--global-text-color);
+    }
+
+    div.thesis.hidden {
+      border: dashed 1px var(--global-bg-color);
+    }
+
+    div.thesis.hidden.open {
+      border-color: var(--global-text-color);
+    }
+  }
 
   h1 {
     color: var(--global-theme-color);
@@ -730,6 +832,13 @@ footer.sticky-bottom {
       margin-bottom: 1rem;
 
       .preview {
+        img {
+          width: 100%;
+          max-width: 180px;
+          height: 140px;
+          object-fit: cover;
+          border-radius: 6px;
+        }
       }
 
       .abbr {
@@ -739,7 +848,7 @@ footer.sticky-bottom {
           display: inline-block;
           background-color: var(--global-theme-color);
           margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
+          color: var(--global-hover-text-color) !important;
 
           a {
             color: white;
@@ -796,10 +905,23 @@ footer.sticky-bottom {
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
           margin-left: 0;
+          margin-right: 0.5rem;
+          margin-bottom: 0.5rem;
+          background-color: transparent;
+          text-decoration: none;
+          transition: all 0.2s ease-in-out;
 
           &:hover {
             color: var(--global-theme-color);
             border-color: var(--global-theme-color);
+            text-decoration: none;
+          }
+
+          &:focus {
+            color: var(--global-theme-color);
+            border-color: var(--global-theme-color);
+            text-decoration: none;
+            box-shadow: none;
           }
         }
         a.award.btn {
@@ -867,6 +989,12 @@ footer.sticky-bottom {
     }
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
+    }
+    div.thesis.hidden {
+      border: dashed 1px var(--global-bg-color);
+    }
+    div.thesis.hidden.open {
+      border-color: var(--global-text-color);
     }
   }
 }

@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed:*)",
+      "Bash(bundle exec:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(cp:*)",
+      "Bash(rm:*)",
+      "Bash(head:*)",
+      "Bash(git add:*)",
+      "Bash(pkill:*)",
+      "Bash(true)",
+      "Bash(rg:*)",
+      "Bash(mkdir:*)",
+      "Bash(curl:*)",
+      "Bash(ruby:*)",
+      "Bash(git push:*)"
+    ],
+    "deny": []
+  }
+}
