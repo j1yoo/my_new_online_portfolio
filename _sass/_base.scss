@@ -696,10 +696,9 @@ footer.sticky-bottom {
 
 .publications {
   margin-top: 2rem;
-  padding-top: 1rem;
 
-  // Add spacing between student entries
-  .row {
+  // Add spacing between student entries (supervision page only)
+  .student-row {
     margin-bottom: 1.25rem;
     
     // Student photo styling for supervisions page
@@ -712,6 +711,16 @@ footer.sticky-bottom {
         border-radius: 6px;
         object-position: center top;
       }
+    }
+  }
+
+  // Year headings on supervision page - add spacing between year groups
+  h2.year {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    
+    &:first-child {
+      margin-top: 1rem; // Less space for the first year group
     }
   }
 

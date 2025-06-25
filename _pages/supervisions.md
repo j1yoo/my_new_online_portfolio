@@ -28,7 +28,7 @@ nav_order: 7
     <div id="{{ student.name | slugify }}" class="student-entry">
       {%- if student.photo -%}
         <!-- Two-column layout with photo -->
-        <div class="row">
+        <div class="student-row">
           <!-- Student Photo -->
           <div class="col-sm-2 preview" style="padding-right: 0px;">
             <img class="preview z-depth-1 rounded" src="{{ student.photo | prepend: '/assets/img/student_photos/' | relative_url }}" alt="{{ student.name }}">

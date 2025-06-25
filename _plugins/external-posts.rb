@@ -118,11 +118,16 @@ module ExternalPosts
         response = HTTParty.get(url, {
           timeout: 30,
           headers: {
-            'User-Agent' => 'Mozilla/5.0 (compatible; Jekyll External Posts Plugin; +https://jekyllrb.com/)',
-            'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-            'Accept-Language' => 'en-US,en;q=0.5',
-            'Accept-Encoding' => 'gzip, deflate',
-            'Connection' => 'keep-alive'
+            'User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+            'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+            'Accept-Language' => 'en-US,en;q=0.9',
+            'Accept-Encoding' => 'gzip, deflate, br',
+            'Connection' => 'keep-alive',
+            'Upgrade-Insecure-Requests' => '1',
+            'Sec-Fetch-Dest' => 'document',
+            'Sec-Fetch-Mode' => 'navigate',
+            'Sec-Fetch-Site' => 'none',
+            'Cache-Control' => 'max-age=0'
           }
         })
         
@@ -223,6 +228,15 @@ module ExternalPosts
       title = parsed_html.at('head meta[property="og:title"]')&.attr('content')
       title ||= parsed_html.at('head meta[name="twitter:title"]')&.attr('content')
       title ||= parsed_html.at('head title')&.text&.strip
+      
+      # Substack-specific selectors
+      if url.include?('substack.com')
+        title ||= parsed_html.at('.post-title')&.text&.strip
+        title ||= parsed_html.at('h1.post-title')&.text&.strip
+        title ||= parsed_html.at('[data-testid="post-title"]')&.text&.strip
+        title ||= parsed_html.at('.pencraft.pc-display-font.pc-tracking-tight.pc-reset._color-pub-primary-text_3axnc_204._line-height-20_3axnc_95._font-meta_3axnc_131._size-11_3axnc_35._weight-medium_3axnc_162._transform-uppercase_3axnc_242._reset_3axnc_1')&.text&.strip
+      end
+      
       title ||= parsed_html.at('h1')&.text&.strip
       title ||= "External Post from #{URI.parse(url).host}"
       
@@ -242,6 +256,12 @@ module ExternalPosts
     def extract_body_content(parsed_html)
       # Try to find main content area first
       main_content = parsed_html.at('main, article, .post-content, .entry-content')
+      
+      # Substack-specific content selectors
+      main_content ||= parsed_html.at('.available-content')
+      main_content ||= parsed_html.at('.body.markup')
+      main_content ||= parsed_html.at('[data-testid="post-content"]')
+      
       if main_content
         body_content = main_content.search('p').map { |e| e.text }
       else
@@ -249,7 +269,14 @@ module ExternalPosts
       end
       
       # Clean and join content
-      body_content.reject(&:empty?).join(' ').strip
+      content_text = body_content.reject(&:empty?).join(' ').strip
+      
+      # If content is too short, try alternative extraction
+      if content_text.length < 50
+        content_text = parsed_html.search('div p, article p').map { |e| e.text }.reject(&:empty?).join(' ').strip
+      end
+      
+      content_text
     end
 
     def default_content(url)
