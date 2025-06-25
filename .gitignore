@@ -11,3 +11,6 @@ assets/libs/
 node_modules/
 vendor
 .idea
+
+# Claude Code settings (keep local only)
+.claude/settings.local.json
