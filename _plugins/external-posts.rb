@@ -90,7 +90,11 @@ module ExternalPosts
       html = HTTParty.get(url).body
       parsed_html = Nokogiri::HTML(html)
 
-      title = parsed_html.at('head title')&.text.strip || ''
+      title = parsed_html.at('head title')&.text&.strip || ''
+      # Clean up title by removing site suffix
+      title = title.split(' | ').first if title.include?(' | ')
+      title = title.split(' - ').first if title.include?(' - ')
+      title = title.strip
       description = parsed_html.at('head meta[name="description"]')&.attr('content')
       description ||= parsed_html.at('head meta[name="og:description"]')&.attr('content')
       description ||= parsed_html.at('head meta[property="og:description"]')&.attr('content')
