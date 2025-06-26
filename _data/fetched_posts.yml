@@ -1,0 +1,6 @@
+posts:
+  - url: https://diddigest.substack.com/p/ddd-estimators-distributional-effects
+    published_date: 2025-05-23
+    source_name: substack.com
+    title: "DDD Estimators and Distributional Effects"
+    content: "A discussion of recent developments in Difference-in-Differences (DDD) estimation, focusing on how to account for distributional effects."

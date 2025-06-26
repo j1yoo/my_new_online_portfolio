@@ -87,11 +87,23 @@ module ExternalPosts
     end
 
     def fetch_from_urls(site, src)
-      src['posts'].each do |post|
-        puts "...fetching #{post['url']}"
-        content = fetch_content_from_url(post['url'])
-        content[:published] = parse_published_date(post['published_date'])
-        create_document(site, src['name'], post['url'], content)
+      data_file = site.in_source_dir("_data/fetched_posts.yml")
+      if File.exist?(data_file)
+        fetched_posts = YAML.load_file(data_file)['posts']
+        fetched_posts.each do |post|
+          if post['source_name'] == src['name']
+            puts "...loading pre-fetched content for #{post['url']}"
+            content = {
+              title: post['title'],
+              content: post['content'],
+              summary: post['content'][0, 150] + '...',
+              published: Time.parse(post['published_date'].to_s).utc
+            }
+            create_document(site, src['name'], post['url'], content)
+          end
+        end
+      else
+        puts "Warning: _data/fetched_posts.yml not found. Run bin/fetch_external_posts.rb to generate it."
       end
     end
 
